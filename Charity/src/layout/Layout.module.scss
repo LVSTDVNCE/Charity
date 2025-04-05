@@ -1,0 +1,12 @@
+.layout {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	&__content {
+		flex: 1;
+		max-width: 1296px;
+		padding: 10px;
+		margin: 0 auto;
+	}
+}

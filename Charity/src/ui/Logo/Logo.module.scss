@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss' as *;
+
+.logo {
+	color: $text-color-secondary;
+	font-weight: $fw-bold;
+	position: relative;
+	padding-left: 28px;
+
+	&::before {
+		content: url('../../assets/icons/headerLogo.png');
+		position: absolute;
+		left: 0;
+	}
+}

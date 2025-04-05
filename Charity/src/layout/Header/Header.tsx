@@ -1,42 +1,28 @@
-import { RoutePaths } from 'src/routes/Routes';
-import { Link } from 'react-router-dom';
-
-const LINKS = [
-	{
-		to: RoutePaths.HOME,
-		text: 'Главная',
-	},
-	{
-		to: RoutePaths.EVENTS,
-		text: 'Все мероприятия',
-	},
-	{
-		to: RoutePaths.CREATE_EVENT,
-		text: 'Организовать',
-	},
-	{
-		to: RoutePaths.ABOUT_US,
-		text: 'О нас',
-	},
-	{
-		to: RoutePaths.CONTACT_US,
-		text: 'Свяжитесь с нами',
-	},
-];
+import { NavLink } from 'react-router-dom';
+import { LINKS } from './Header.const';
+import { Button, Logo } from '@ui';
+import styles from './Header.module.scss';
 
 export const Header = () => {
 	return (
-		<header>
-			<nav>
-				<Link to={RoutePaths.HOME}>CHARITY</Link>
-				<ul>
+		<header className={styles.header}>
+			<nav className={styles.header__nav}>
+				<Logo />
+				<ul className={styles.header__list}>
 					{LINKS.map(item => (
 						<li key={item.to}>
-							<Link to={item.to}>{item.text}</Link>
+							<NavLink
+								to={item.to}
+								className={({ isActive }) =>
+									isActive ? styles.header__active : styles.header__links
+								}
+							>
+								{item.text}
+							</NavLink>
 						</li>
 					))}
 				</ul>
-				<button>Пожертвовать</button>
+				<Button className={styles.header__button} text='Пожертвовать' />
 			</nav>
 		</header>
 	);

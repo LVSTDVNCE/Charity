@@ -1,0 +1,11 @@
+@use '../../styles/variables.scss' as *;
+
+.footer {
+	width: 100%;
+	background-color: $bg-color-header-footer;
+
+	&__wrapper {
+		max-width: 1296px;
+		margin: 0 auto;
+	}
+}

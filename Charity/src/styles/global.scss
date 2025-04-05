@@ -1,6 +1,6 @@
+@use 'variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Teachers:wght@400..800&display=swap');
-@import './reset.scss';
-@import './variables.scss';
+@import url('./reset.scss');
 
 html {
 	font-size: 10px;

@@ -1,0 +1,56 @@
+@use '../../../styles/variables.scss' as *;
+
+.steps {
+	padding: 120px 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+
+	&__img {
+		max-width: 628px;
+		height: 560px;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	&__wrapper {
+		max-width: 600px;
+	}
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-3xl;
+		margin-bottom: 40px;
+	}
+
+	&__list {
+		height: 84px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		column-gap: 40px;
+		row-gap: 28px;
+
+		font-family: $ff-secondary;
+		font-size: $fz-xm;
+		font-weight: $fw-semi-bold;
+
+		& li {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			&::before {
+				content: '';
+				width: 22px;
+				height: 22px;
+				border-radius: 50%;
+				background-color: $bg-color-main-button;
+			}
+		}
+	}
+}

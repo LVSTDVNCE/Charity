@@ -3,9 +3,64 @@
 .footer {
 	width: 100%;
 	background-color: $bg-color-header-footer;
+	padding: 60px 10px 40px;
 
 	&__wrapper {
 		max-width: 1296px;
 		margin: 0 auto;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		color: $text-color-secondary;
+	}
+
+	&__charity {
+		max-width: 303px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__paragraph {
+		font-size: $fz-m;
+
+		& span {
+			font-weight: $fw-semi-bold;
+			font-family: $ff-secondary;
+		}
+
+		& a {
+			color: $text-color-secondary;
+			opacity: 60%;
+		}
+	}
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-size: $fz-m;
+		font-weight: $fw-semi-bold;
+		font-size: $fz-xm;
+		margin-bottom: 16px;
+	}
+
+	&__list {
+		& li {
+			margin-bottom: 8px;
+		}
+
+		& a {
+			font-size: $fz-m;
+			color: $text-color-secondary;
+		}
+	}
+
+	&__events {
+		max-width: 256px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
 	}
 }

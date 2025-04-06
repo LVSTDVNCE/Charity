@@ -1,0 +1,49 @@
+@use '../../../styles/variables.scss' as *;
+
+.donate {
+	width: 100%;
+	padding: 60px 0;
+	position: relative;
+
+	&::before {
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		background-color: $bg-color-gray;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&__item {
+		max-width: 400px;
+		display: flex;
+		gap: 24px;
+
+		& img {
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-xm;
+		margin-bottom: 12px;
+	}
+
+	&__paragraph {
+		font-size: $fz-m;
+		opacity: 60%;
+	}
+}

@@ -1,5 +1,13 @@
+import { DonateTo, Steps, Welcome } from '@components/index';
+
 const Home = () => {
-	return <div>Home</div>;
+	return (
+		<>
+			<Welcome />
+			<Steps />
+			<DonateTo />
+		</>
+	);
 };
 
 export default Home;

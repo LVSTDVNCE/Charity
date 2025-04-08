@@ -1,0 +1,56 @@
+@use '../../../styles/variables.scss' as *;
+
+.news {
+	padding: 120px 0;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 40px;
+		margin-bottom: 60px;
+	}
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-3xl;
+	}
+
+	&__button {
+		padding: 20px 37px;
+		border: 2px solid $bg-color-secondary-button;
+		border-radius: 16px;
+
+		font-family: $ff-secondary;
+		font-size: $fz-m;
+		font-weight: $fw-bold;
+	}
+
+	&__cardsList {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 14px;
+		row-gap: 20px;
+	}
+
+	&__buttonCard {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-m;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-top: 70px;
+
+		&::after {
+			display: block;
+			width: 24px;
+			height: 24px;
+			content: url('../../../assets/icons/arrow-right.png');
+		}
+	}
+}

@@ -1,4 +1,11 @@
-import { DonateTo, Steps, Welcome } from '@components/index';
+import {
+	DonateTo,
+	LastEvents,
+	Steps,
+	Welcome,
+	MapOfEvents,
+	News,
+} from '@components/index';
 
 const Home = () => {
 	return (
@@ -6,6 +13,9 @@ const Home = () => {
 			<Welcome />
 			<Steps />
 			<DonateTo />
+			<LastEvents />
+			<MapOfEvents />
+			<News />
 		</>
 	);
 };

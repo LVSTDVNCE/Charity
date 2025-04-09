@@ -30,7 +30,7 @@ export const News = () => {
 	return (
 		<section className={styles.news}>
 			<div className={styles.news__wrapper}>
-				<h3 className={styles.news__heading}>Последние мероприятия</h3>
+				<h3 className={styles.news__heading}>Новости</h3>
 				<Button text='СМОТРЕТЬ ЕЩЕ' className={styles.news__button} />
 			</div>
 			<div className={styles.news__cardsList}>

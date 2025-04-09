@@ -1,0 +1,26 @@
+@use '../../styles/variables.scss' as *;
+
+.breadCrumbs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	font-size: $fz-m;
+
+	& a {
+		color: $text-color-main;
+		opacity: 60%;
+
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+	}
+
+	&__arrow {
+		display: block;
+		width: 16px;
+		height: 16px;
+		background-image: url('../../assets/icons/chevron-right.png');
+	}
+}

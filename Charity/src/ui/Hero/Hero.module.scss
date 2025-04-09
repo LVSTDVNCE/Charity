@@ -1,0 +1,18 @@
+@use '../../styles/variables.scss' as *;
+
+.hero {
+	padding: 120px 0;
+	text-align: center;
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-hero;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
+	&__paragraph {
+		font-size: $fz-m;
+	}
+}

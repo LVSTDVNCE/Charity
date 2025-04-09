@@ -1,0 +1,41 @@
+@use '../../../styles/variables.scss' as *;
+
+.help {
+	padding: 60px 0;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-width: 380px;
+		padding: 24px 16px;
+		background-color: $bg-color-gray;
+		border-radius: 20px;
+	}
+
+	&__img {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 24px;
+	}
+
+	&__heading {
+		margin-bottom: 12px;
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-l;
+	}
+
+	&__paragraph {
+		font-size: $fz-m;
+		opacity: 60%;
+	}
+}

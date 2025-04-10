@@ -1,0 +1,44 @@
+@use '../../../styles/variables.scss' as *;
+
+.action {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 60px;
+	padding: 120px 0 60px;
+
+	&__img {
+		max-width: 636px;
+		height: 560px;
+		object-fit: cover;
+		border-radius: 20px;
+
+		@media (max-width: 676px) {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__heading {
+		max-width: 550px;
+		margin-bottom: 40px;
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-3xl;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 550px;
+		gap: 20px;
+	}
+
+	&__paragraph {
+		display: block;
+		max-width: 225px;
+		font-size: $fz-m;
+		line-height: 28px;
+		opacity: 60%;
+	}
+}

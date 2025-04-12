@@ -4,3 +4,7 @@ export { Loader } from './Loader/Loader';
 export { Card } from './Card/Card';
 export { BreadCrumbs } from './BreadCrumbs/BreadCrumbs';
 export { Hero } from './Hero/Hero';
+export { Form } from './Form/Form';
+export { Label } from './Label/Label';
+export { Textarea } from './Textarea/Textarea';
+export { Input } from './Input/Input';

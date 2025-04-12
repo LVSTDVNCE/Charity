@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss' as *;
+
+.textarea {
+	width: 100%;
+
+	&__field {
+		width: 100%;
+		height: 148px;
+		padding: 6px 16px;
+		background-color: $bg-color-page;
+		border-radius: 6px;
+		resize: none;
+		font-size: $fz-m;
+		line-height: 20px;
+
+		&::placeholder {
+			font-size: $fz-m;
+			line-height: 20px;
+			opacity: 60%;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+@use '../../styles/variables.scss' as *;
+
+.label {
+	display: block;
+	font-family: $ff-secondary;
+	font-weight: $fw-medium;
+	font-size: $fz-xm;
+	margin-bottom: 6px;
+}

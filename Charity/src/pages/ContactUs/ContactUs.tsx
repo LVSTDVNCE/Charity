@@ -1,4 +1,4 @@
-import { ContactContent, ContactForm } from '@components/index';
+import { ContactContent, ContactForm, FAQ } from '@components/index';
 import { BreadCrumbs, Hero } from '@ui';
 import { HERO_HEADING, HERO_PARAGRAPH } from './ContactUs.const';
 
@@ -10,6 +10,7 @@ const ContactUs = () => {
 			</Hero>
 			<ContactForm />
 			<ContactContent />
+			<FAQ />
 		</>
 	);
 };

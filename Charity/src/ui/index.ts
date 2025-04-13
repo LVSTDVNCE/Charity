@@ -8,3 +8,4 @@ export { Form } from './Form/Form';
 export { Label } from './Label/Label';
 export { Textarea } from './Textarea/Textarea';
 export { Input } from './Input/Input';
+export { Accordion } from './Accordion/Accordion';

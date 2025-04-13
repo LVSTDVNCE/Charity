@@ -1,0 +1,26 @@
+@use '../../../styles/variables.scss' as *;
+
+.faq {
+	padding: 120px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	&__wrapper {
+		max-width: 270px;
+	}
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+		font-size: $fz-3xl;
+		line-height: 68px;
+		margin-bottom: 40px;
+	}
+
+	&__paragraph {
+		font-size: $fz-m;
+		opacity: 60%;
+	}
+}

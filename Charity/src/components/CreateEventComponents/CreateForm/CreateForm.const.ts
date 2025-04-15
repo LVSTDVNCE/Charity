@@ -1,4 +1,14 @@
-export const CREATE_FORM_ITEMS = [
+import { ICreateFormProps } from 'types';
+
+type TInputConfigProps = {
+	id: keyof ICreateFormProps;
+	type: string;
+	placeholder: string;
+	htmlFor: string;
+	text: string;
+};
+
+export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 	{
 		type: 'text',
 		id: 'name',
@@ -22,9 +32,9 @@ export const CREATE_FORM_ITEMS = [
 	},
 	{
 		type: 'tel',
-		id: 'tel',
+		id: 'phoneNumber',
 		placeholder: 'Номер телефона',
-		htmlFor: 'tel',
+		htmlFor: 'phoneNumber',
 		text: 'Номер телефона',
 	},
 
@@ -51,9 +61,9 @@ export const CREATE_FORM_ITEMS = [
 	},
 	{
 		type: 'text',
-		id: 'nameEvent',
+		id: 'title',
 		placeholder: 'Название мероприятия',
-		htmlFor: 'nameEvent',
+		htmlFor: 'title',
 		text: 'Название мероприятия',
 	},
 ];

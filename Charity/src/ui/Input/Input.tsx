@@ -1,16 +1,31 @@
-import { ReactNode, FC } from 'react';
+import { ReactNode } from 'react';
+import {
+	FieldErrors,
+	FieldValues,
+	get,
+	Path,
+	UseFormRegister,
+} from 'react-hook-form';
 import styles from './Input.module.scss';
 
-type TInputProps = {
+type TInputProps<T extends FieldValues> = {
+	id: Path<T>;
 	type: string;
-	id: string;
 	placeholder: string;
 	children: ReactNode;
+	register: UseFormRegister<T>;
+	errors: FieldErrors<T>;
 };
 
-export const Input: FC<TInputProps> = props => {
-	const { type, id, placeholder, children } = props;
-
+export const Input = <T extends FieldValues>({
+	type,
+	id,
+	placeholder,
+	children,
+	register,
+	errors,
+}: TInputProps<T>) => {
+	const errorMessage = get(errors, `${id}.message`) as string;
 	return (
 		<div className={styles.input}>
 			{children}
@@ -19,8 +34,10 @@ export const Input: FC<TInputProps> = props => {
 				id={id}
 				placeholder={placeholder}
 				className={styles.input__field}
+				{...register(id)}
 				required
 			/>
+			{errors && <p>{errorMessage}</p>}
 		</div>
 	);
 };

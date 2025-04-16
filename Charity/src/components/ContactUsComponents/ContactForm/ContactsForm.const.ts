@@ -1,4 +1,14 @@
-export const INPUT_CONFIG = [
+import { IContactFormProps } from 'types';
+
+type TInputConfigProps = {
+	id: keyof IContactFormProps;
+	type: string;
+	placeholder: string;
+	htmlFor: string;
+	text: string;
+};
+
+export const INPUT_CONFIG: TInputConfigProps[] = [
 	{
 		type: 'text',
 		id: 'name',

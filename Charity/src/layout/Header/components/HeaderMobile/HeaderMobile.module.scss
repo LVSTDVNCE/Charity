@@ -1,0 +1,58 @@
+@use '../../../../styles/variables.scss' as *;
+
+.header {
+	&__nav {
+		max-width: 1296px;
+		margin: 0 auto;
+		padding: 20px 10px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (min-width: 1001px) {
+			display: none;
+		}
+	}
+
+	&__wrapper {
+		position: absolute;
+		top: 20px;
+		right: 10px;
+		z-index: 1;
+		padding: 10px;
+		padding-top: 40px;
+		border-radius: 20px;
+		background-color: $bg-color-header-footer;
+	}
+
+	&__burgerBtn {
+		width: 40px;
+		height: 40px;
+	}
+
+	&__burgerBtnClose {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+	&__listMobile {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		& a {
+			color: $text-color-secondary;
+		}
+	}
+
+	&__button {
+		padding: 10px 40px;
+		background-color: $bg-color-main-button;
+		border-radius: 16px;
+		text-transform: uppercase;
+		font-weight: $fw-bold;
+	}
+}

@@ -3,7 +3,7 @@ import styles from './Form.module.scss';
 
 type TFormProps = {
 	children: ReactNode;
-	onSubmit: () => void;
+	onSubmit?: () => void;
 };
 
 export const Form: FC<TFormProps> = ({ children, onSubmit }) => {

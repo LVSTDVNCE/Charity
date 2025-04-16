@@ -1,8 +1,20 @@
 import { Button, Form, Input, Label, Textarea } from '@ui';
-import styles from './ContactForm.module.scss';
 import { INPUT_CONFIG } from './ContactsForm.const';
+import { useForm } from 'react-hook-form';
+import { IContactFormProps } from 'types';
+import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<IContactFormProps>();
+
+	const onSubmit = (data: IContactFormProps) => {
+		console.log(data);
+	};
+
 	return (
 		<section className={styles.contactForm}>
 			<div className={styles.contactForm__wrapper}>
@@ -34,19 +46,28 @@ export const ContactForm = () => {
 					Mon-Fri: 8:00am - 6:00pm
 				</p>
 			</div>
-			<Form>
+			<Form onSubmit={handleSubmit(onSubmit)}>
 				{INPUT_CONFIG.map(item => (
-					<Input type={item.type} id={item.id} placeholder={item.placeholder}>
+					<Input<IContactFormProps>
+						type={item.type}
+						id={item.id}
+						placeholder={item.placeholder}
+						register={register}
+						errors={errors}
+						key={item.id}
+					>
 						<Label htmlFor={item.htmlFor} text={item.text} />
 					</Input>
 				))}
-				<Textarea
+				<Textarea<IContactFormProps>
 					name='message'
 					id='message'
 					rows={5}
 					cols={33}
 					maxLength={500}
 					placeholder='Сообщение'
+					register={register}
+					errors={errors}
 				>
 					<Label htmlFor='message' text='Сообщение' />
 				</Textarea>

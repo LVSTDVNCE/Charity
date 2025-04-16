@@ -43,6 +43,11 @@
 		font-family: $ff-secondary;
 		font-weight: $fw-bold;
 		text-transform: capitalize;
+
+		@media (max-width: 670px) {
+			max-width: 100%;
+			font-size: $fz-3xl;
+		}
 	}
 
 	&__paragraph {

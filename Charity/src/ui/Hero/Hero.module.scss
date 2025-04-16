@@ -10,6 +10,10 @@
 		font-size: $fz-hero;
 		margin-top: 20px;
 		margin-bottom: 40px;
+
+		@media (max-width: 600px) {
+			font-size: $fz-2xl;
+		}
 	}
 
 	&__paragraph {

@@ -1,4 +1,5 @@
 import { Button, Card } from '@ui';
+import { supabase } from 'src/supabase-client';
 import MOCK_IMG from '@assets/images/stepsImg.jpg';
 import styles from './LastEvents.module.scss';
 
@@ -46,6 +47,19 @@ const MOCK_CARDS = [
 		description: 'Описание',
 	},
 ];
+
+async function getUpcomingEvents() {
+	const { data, error } = await supabase
+		.from('Events')
+		.select('*')
+		.gte('date', new Date().toISOString().split('T')[0])
+		.order('date', { ascending: true })
+		.order('time', { ascending: true })
+		.limit(6);
+
+	if (error) console.error('Ошибка:', error);
+	return data;
+}
 
 export const LastEvents = () => {
 	return (

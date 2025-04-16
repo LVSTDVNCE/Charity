@@ -1,6 +1,6 @@
 import { RoutePaths } from 'src/routes/Routes';
 
-export const LINKS = [
+export const NAV_BAR_LINKS = [
 	{
 		to: RoutePaths.HOME,
 		text: 'Главная',

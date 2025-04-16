@@ -66,4 +66,11 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		htmlFor: 'title',
 		text: 'Название мероприятия',
 	},
+	{
+		type: 'file',
+		id: 'image',
+		placeholder: 'Выберите фотографию',
+		htmlFor: 'image',
+		text: 'Выберите фотографию',
+	},
 ];

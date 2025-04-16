@@ -1,10 +1,10 @@
 import {
-	DonateTo,
 	LastEvents,
 	Steps,
 	Welcome,
 	MapOfEvents,
 	News,
+	HelpTo,
 } from '@components/index';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
 		<>
 			<Welcome />
 			<Steps />
-			<DonateTo />
+			<HelpTo />
 			<LastEvents />
 			<MapOfEvents />
 			<News />

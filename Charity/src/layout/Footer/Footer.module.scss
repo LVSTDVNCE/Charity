@@ -11,10 +11,15 @@
 
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
 		flex-wrap: wrap;
+		gap: 20px;
 
 		color: $text-color-secondary;
+
+		@media (max-width: 500px) {
+			align-items: flex-start;
+			justify-content: center;
+		}
 	}
 
 	&__charity {

@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styles from './Button.module.scss';
 
 type TButtonProps = {
-	text: string;
+	text?: string;
 	className: string;
 	onClick?: () => void;
 	children?: ReactNode;

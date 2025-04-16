@@ -5,12 +5,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 
 	&__heading {
 		font-family: $ff-secondary;
 		font-weight: $fw-bold;
 		font-size: $fz-3xl;
 		margin-bottom: 40px;
+
+		@media (max-width: 600px) {
+			font-size: $fz-2xl;
+		}
 	}
 
 	&__paragraph {

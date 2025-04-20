@@ -7,21 +7,20 @@ export const CallToAction = () => {
 			<img src={MOCK_IMG} alt='' className={styles.action__img} />
 			<div>
 				<h2 className={styles.action__heading}>
-					Make a Difference, Support Those in Need.
+					Измените ситуацию к лучшему, поддержите тех, кто нуждается.
 				</h2>
 				<div className={styles.action__wrapper}>
 					<p className={styles.action__paragraph}>
-						Libero dictum ut purus ut vel sit egestas. Amet id in tristique
-						bibendum justo netus augue id. Nunc tristique quis leo duis gravida
-						volutpat vitae quam quam. Ultrices urna nec massa commodo id sit
-						diam amet et. Libero dictum ut purus ut vel sit egestas. Ut ac
-						mattis senectus ac
+						Мы верим, что даже небольшие действия могут изменить жизни к
+						лучшему. Наша платформа объединяет людей, готовых помогать, и тех,
+						кто в этом нуждается. Через волонтерство, благотворительные акции и
+						сборы средств мы создаем сообщество, где каждый может внести свой
+						вклад.
 					</p>
 					<p className={styles.action__paragraph}>
-						Lorem ipsum dolor sit amet consectetur. Amet id in tristique
-						bibendum justo netus augue id. Nunc tristique quis leo duis gravida
-						volutpat vitae quam quam. Ultrices urna nec massa commodo id sit
-						diam amet et. Libero dictum ut purus ut vel sit egestas. Ut ac matt
+						Присоединяйтесь! Неважно, станете ли вы волонтером, донором или
+						просто расскажете о нас друзьям – любая помощь ценна. Вместе мы
+						делаем мир добрее.
 					</p>
 				</div>
 			</div>

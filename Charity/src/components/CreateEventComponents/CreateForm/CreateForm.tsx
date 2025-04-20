@@ -2,18 +2,19 @@ import { Fragment } from 'react/jsx-runtime';
 import { useForm } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
 import { supabase } from 'src/supabase-client';
-import { Button, Form, Input, Label, Loader, Textarea } from '@ui';
+import { Button, Form, Input, Label, Loader, Message, Textarea } from '@ui';
 import { CREATE_FORM_ITEMS } from './CreateForm.const';
 import { ICreateFormProps } from 'types';
 import styles from './CreateForm.module.scss';
 
 const createEvent = async (Event: ICreateFormProps) => {
-	const filePath = `${Event.phoneNumber}-${Date.now()}-${Event.image[0].name}`;
-	console.log(Event);
+	const file = Event.image[0];
+	const fileName = file.name;
+	const filePath = `${Date.now()}-${fileName}`;
 
 	const { error: uploadError } = await supabase.storage
 		.from('events-images')
-		.upload(filePath, Event.image);
+		.upload(filePath, file);
 
 	if (uploadError) throw new Error(uploadError.message);
 
@@ -21,12 +22,12 @@ const createEvent = async (Event: ICreateFormProps) => {
 		.from('events-images')
 		.getPublicUrl(filePath);
 
-	const { data, error } = await supabase
-		.from('Events')
-		.insert({ ...Event, image: publicURLData.publicUrl });
+	Event.image = publicURLData.publicUrl;
+
+	const { data, error } = await supabase.from('Events').insert(Event);
+	console.log(Event);
 
 	if (error) throw new Error(error.message);
-
 	return data;
 };
 
@@ -78,9 +79,9 @@ export const CreateForm = () => {
 					<Label htmlFor='description' text='Описание' />
 				</Textarea>
 				<Button text='Отправить' className={styles.createForm__button} />
-				{isError && <p>Ошибка</p>}
 			</Form>
-			{isSuccess && <p>Успешно</p>}
+			{isError && <Message text='Ошибка' type='error' />}
+			{isSuccess && <Message text='Успешно' type='success' />}
 		</section>
 	);
 };

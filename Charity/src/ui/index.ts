@@ -10,3 +10,4 @@ export { Textarea } from './Textarea/Textarea';
 export { Input } from './Input/Input';
 export { Accordion } from './Accordion/Accordion';
 export { NavBar } from './NavBar/NavBar';
+export { Message } from './Message/Message';

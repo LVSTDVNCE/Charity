@@ -43,13 +43,13 @@
 	}
 
 	.accordion__toggleClose {
-		width: 40px;
-		height: 40px;
-		border: 1px solid $bg-color-header-footer;
-		border-radius: 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		min-width: 40px;
+		height: 40px;
+		border: 1px solid $bg-color-header-footer;
+		border-radius: 50%;
 
 		&::after {
 			content: url('../../assets/icons/toggleClose.png');
@@ -57,13 +57,13 @@
 	}
 
 	.accordion__toggleOpen {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		background-color: $bg-color-main-button;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		min-width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: $bg-color-main-button;
 
 		&::after {
 			content: url('../../assets/icons/toggleOpen.png');

@@ -6,7 +6,7 @@ export const AboutOurOrg = () => {
 	return (
 		<section className={styles.aboutOrg}>
 			<div className={styles.aboutOrg__wrapper}>
-				<h2 className={styles.aboutOrg__heading}>About our Organization</h2>
+				<h2 className={styles.aboutOrg__heading}>О нашей организации</h2>
 				<ul className={styles.aboutOrg__list}>
 					{LIST_ITEMS.map(item => (
 						<li key={item.title} className={styles.aboutOrg__item}>

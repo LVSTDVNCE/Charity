@@ -1,10 +1,32 @@
+import { useQuery } from '@tanstack/react-query';
+import { supabase } from 'src/supabase-client';
 import { Link } from 'react-router-dom';
-import { Logo } from '@ui';
+import { Loader, Logo } from '@ui';
 import { ADDRESS, LINKS } from './Footer.const';
-import mockImg from '../../assets/images/footerTestImg.png';
 import styles from './Footer.module.scss';
+import { RoutePaths } from '@routes';
+
+type TFooterLinks = {
+	id: number;
+	image: string;
+	title: string;
+};
+
+const getUpcomingEvents = async (): Promise<TFooterLinks[]> => {
+	const { data, error } = await supabase.from('Events').select('*').limit(6);
+
+	if (error) throw new Error(error.message);
+	return data as TFooterLinks[];
+};
 
 export const Footer = () => {
+	const { data, error, isLoading } = useQuery<TFooterLinks[], Error>({
+		queryKey: ['EventsFooter'],
+		queryFn: getUpcomingEvents,
+	});
+	if (error) throw new Error(error.message);
+	if (isLoading) return <Loader />;
+
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.footer__wrapper}>
@@ -40,12 +62,16 @@ export const Footer = () => {
 				<div>
 					<h6 className={styles.footer__heading}>Мероприятия</h6>
 					<div className={styles.footer__events}>
-						<img src={mockImg} alt='' />
-						<img src={mockImg} alt='' />
-						<img src={mockImg} alt='' />
-						<img src={mockImg} alt='' />
-						<img src={mockImg} alt='' />
-						<img src={mockImg} alt='' />
+						{data?.map(item => (
+							<Link key={item.id} to={RoutePaths.EVENT} target='_blank'>
+								<img
+									src={item.image}
+									alt={item.title}
+									title={item.title}
+									className={styles.footer__imgLinks}
+								/>
+							</Link>
+						))}
 					</div>
 				</div>
 			</div>

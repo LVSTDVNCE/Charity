@@ -34,10 +34,15 @@
 	}
 
 	&__heading {
+		display: block;
 		font-family: $ff-secondary;
 		font-weight: $fw-bold;
 		font-size: $fz-xl;
 		margin-bottom: 12px;
+		height: 33px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		cursor: help;
 	}
 
 	&__description {

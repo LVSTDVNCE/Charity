@@ -73,7 +73,6 @@ export const AllEvents = () => {
 		<section className={styles.allEvents}>
 			<div className={styles.allEvents__wrapper}>
 				<h2 className={styles.allEvents__heading}>Все мероприятия</h2>
-				<Button text='СМОТРЕТЬ ЕЩЕ' className={styles.allEvents__button} />
 			</div>
 			<div className={styles.allEvents__cardsList}>
 				{MOCK_CARDS.map(card => (

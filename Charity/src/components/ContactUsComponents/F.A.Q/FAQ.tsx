@@ -6,9 +6,11 @@ export const FAQ = () => {
 	return (
 		<section className={styles.faq}>
 			<div className={styles.faq__wrapper}>
-				<h2 className={styles.faq__heading}>Frequently Asked Questions</h2>
+				<h2 className={styles.faq__heading}>Часто Задаваемые Вопросы</h2>
 				<p className={styles.faq__paragraph}>
-					At eu lobortis pretium tincidunt amet lacus ut aenean aliquet
+					Здесь собраны ответы на самые популярные вопросы о нашей платформе.
+					Если вы не нашли нужной информации – напишите нам, и мы с радостью
+					поможем!
 				</p>
 			</div>
 			<Accordion items={FAQ_ITEMS} />

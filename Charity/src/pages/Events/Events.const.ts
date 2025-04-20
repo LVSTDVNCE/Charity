@@ -1,5 +1,5 @@
-const HERO_HEADING = 'Donate Today: Save a Life';
+const HERO_HEADING = 'Измените мир вместе м нами';
 const HERO_PARAGRAPH =
-	'Libero dictum ut purus ut vel sit egestas. Ut ac mattis senectus ac suspendisse vitae vel nulla eleifend. Est eros facilisi aenean nisl a. Vitae et fusce purus consectetur.';
+	'Здесь вы найдете все запланированные благотворительные акции, волонтерские встречи и сборы средств. Выбирайте подходящее мероприятие и станьте частью чего-то большего!';
 
 export { HERO_HEADING, HERO_PARAGRAPH };

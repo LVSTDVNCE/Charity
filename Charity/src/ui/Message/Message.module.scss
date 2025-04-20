@@ -1,0 +1,29 @@
+@use '../../styles/variables.scss' as *;
+
+.error {
+	display: block;
+	width: 100%;
+	max-width: 850px;
+	padding: 10px 0;
+	background-color: red;
+	text-align: center;
+	border-radius: 20px;
+	color: $text-color-secondary;
+	font-family: $ff-secondary;
+	font-size: $fz-m;
+	font-weight: $fw-bold;
+}
+
+.success {
+	display: block;
+	width: 100%;
+	max-width: 850px;
+	padding: 10px 0;
+	background-color: green;
+	text-align: center;
+	border-radius: 20px;
+	color: $text-color-secondary;
+	font-family: $ff-secondary;
+	font-size: $fz-m;
+	font-weight: $fw-bold;
+}

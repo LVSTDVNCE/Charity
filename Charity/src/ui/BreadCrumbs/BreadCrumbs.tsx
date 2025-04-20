@@ -9,7 +9,7 @@ type TBreadCrumbs = {
 export const BreadCrumbs = ({ text }: TBreadCrumbs) => {
 	return (
 		<div className={styles.breadCrumbs}>
-			<Link to={RoutePaths.HOME}>Home</Link>
+			<Link to={RoutePaths.HOME}>Главная</Link>
 			<span className={styles.breadCrumbs__arrow}></span>
 			{text}
 		</div>

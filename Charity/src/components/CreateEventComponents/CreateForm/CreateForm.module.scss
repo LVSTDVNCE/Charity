@@ -3,8 +3,10 @@
 .createForm {
 	padding-bottom: 120px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 20px;
 
 	&__button {
 		padding: 10px 40px;

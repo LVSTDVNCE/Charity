@@ -36,6 +36,7 @@ export const Input = <T extends FieldValues>({
 				className={styles.input__field}
 				{...register(id)}
 				required
+				accept='img/*'
 			/>
 			{errors && <p>{errorMessage}</p>}
 		</div>

@@ -4,7 +4,7 @@ export interface ICreateFormProps {
 	email: string;
 	phoneNumber: string;
 	address: string;
-	image: File;
+	image: FileList;
 	date: Date;
 	time: string;
 	title: string;

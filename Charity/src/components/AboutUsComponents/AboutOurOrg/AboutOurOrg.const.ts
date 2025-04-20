@@ -5,20 +5,20 @@ import VALUES from '@assets/icons/values.png';
 export const LIST_ITEMS = [
 	{
 		img: MISSION,
-		title: 'Our Mission',
+		title: 'Наша миссия',
 		description:
-			'Amet id in tristique bibendum justo netus augue id. Nunc tristique quis leo duis gravida volutpat vitae quam quam. Ultrices urna nec massa commodo',
+			'Мы стремимся объединять тех, кто готов помогать, с теми, кто в этом нуждается. Благодаря волонтерам, донорам и партнерам мы превращаем добрые намерения в реальные дела.',
 	},
 	{
 		img: VISION,
-		title: 'Our Vision',
+		title: 'Наше видение',
 		description:
-			'Ultrices urna nec massa commodo id sit diam amet et. Libero dictum ut purus ut vel sit egestas. Ut ac mattis senectus ac suspendisse vitae vel null',
+			'Мы верим в сообщества, где у каждого есть доступ к базовым потребностям и возможностям. Через устойчивые программы и равноправное партнерство мы создаем будущее, где взаимопомощь становится естественной частью жизни.',
 	},
 	{
 		img: VALUES,
-		title: 'Our Values',
+		title: 'Наши ценности',
 		description:
-			'Ut ac mattis senectus ac suspendisse vitae vel nulla eleifend. Est eros facilisi aenean nisl a. Vitae et fusce purus consectetur',
+			'Мы начинаем с искреннего понимания нужд людей, а не с готовых решений. Мы не навязываем решения, а усиливаем локальные инициативы. Используем технологии и творческие подходы, чтобы увеличивать эффективность помощи.',
 	},
 ];

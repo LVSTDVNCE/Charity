@@ -1,32 +1,39 @@
-import { Button, Card } from '@ui';
-import MOCK_IMG from '@assets/images/stepsImg.jpg';
+import { Button, Card, Loader } from '@ui';
 import styles from './News.module.scss';
+import { useQuery } from '@tanstack/react-query';
 
-const MOCK_CARDS = [
-	{
-		id: 1,
-		img: MOCK_IMG,
-		date: 'Дата',
-		title: 'Название',
-		description: 'Описание',
-	},
-	{
-		id: 2,
-		img: MOCK_IMG,
-		date: 'Дата',
-		title: 'Название',
-		description: 'Описание',
-	},
-	{
-		id: 3,
-		img: MOCK_IMG,
-		date: 'Дата',
-		title: 'Название',
-		description: 'Описание',
-	},
-];
+type TNewsResults = {
+	article_id: string;
+	title: string;
+	link: string;
+	creator: string;
+	image_url: string;
+	date: string;
+};
+
+type TNews = {
+	status: string;
+	totalResults: number;
+	results: TNewsResults[];
+};
 
 export const News = () => {
+	const { data, error, isLoading } = useQuery<TNews, Error>({
+		queryKey: ['newsKey'],
+		queryFn: fetchNews,
+	});
+
+	async function fetchNews() {
+		const response = await fetch(
+			'https://newsdata.io/api/1/news?apikey=pub_81845815bfcfd1f3bfd1e2aeea3c9e032bfc6&country=ru&language=ru&category=health '
+		);
+		return await response.json();
+	}
+
+	if (error) throw new Error(error.message);
+
+	console.log(data);
+
 	return (
 		<section className={styles.news}>
 			<div className={styles.news__wrapper}>
@@ -34,14 +41,18 @@ export const News = () => {
 				<Button text='СМОТРЕТЬ ЕЩЕ' className={styles.news__button} />
 			</div>
 			<div className={styles.news__cardsList}>
-				{MOCK_CARDS.map(card => (
-					<Card card={card} key={card.id}>
-						<Button
-							text='Перейти к источнику'
-							className={styles.news__buttonCard}
-						/>
-					</Card>
-				))}
+				{isLoading ? (
+					<Loader />
+				) : (
+					data?.results.map(item => (
+						<Card card={item} key={item.article_id}>
+							<Button
+								text='Перейти к источнику'
+								className={styles.news__buttonCard}
+							/>
+						</Card>
+					))
+				)}
 			</div>
 		</section>
 	);

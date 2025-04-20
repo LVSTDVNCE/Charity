@@ -1,32 +1,32 @@
 export const FAQ_ITEMS = [
 	{
 		id: '1',
-		question: 'What charities can I give to?',
+		question: 'Нужно ли платить за участие?',
 		answer:
-			'Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique. Sit congue non vitae odio sit erat in. Felis eu ultrices a sed massa. Commodo fringilla sed tempor risus laoreet ultricies ipsum. Habitasse morbi faucibus in iaculis lectus',
+			'Участие в мероприятиях бесплатное, но некоторые могут включать благотворительные взносы (например, сбор средств). В описании каждого события указаны условия.',
 	},
 	{
 		id: '2',
-		question: 'Is there a minimum/maximum amount I can donate?',
+		question: 'Могу ли я организовать свое мероприятие через ваш сервис?',
 		answer:
-			'Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique. Sit congue non vitae odio sit erat in. Felis eu ultrices a sed massa. Commodo fringilla sed tempor risus laoreet ultricies ipsum. Habitasse morbi faucibus in iaculis lectus',
+			'Конечно! Мы поддерживаем инициативы. Перейдите в раздел "Создать мероприятие", заполните форму, и после модерации ваша акция появится в общем доступе.',
 	},
 	{
 		id: '3',
-		question: 'Can I give to more than one charity?',
+		question: 'Как я могу помочь, если у меня нет времени на волонтерство?',
 		answer:
-			'Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique. Sit congue non vitae odio sit erat in. Felis eu ultrices a sed massa. Commodo fringilla sed tempor risus laoreet ultricies ipsum. Habitasse morbi faucibus in iaculis lectus',
+			'Вы можете сделать пожертвование в общий фонд, поделиться информацией о событиях в соцсетях или стать партнером проекта.',
 	},
 	{
 		id: '4',
-		question: 'When will my charity receive my donation?',
+		question: 'Как узнать, что мероприятие одобрено вашей платформой?',
 		answer:
-			'Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique. Sit congue non vitae odio sit erat in. Felis eu ultrices a sed massa. Commodo fringilla sed tempor risus laoreet ultricies ipsum. Habitasse morbi faucibus in iaculis lectus',
+			'Все мероприятия проходят проверку модераторов. После проверки вам придет уведомление на электронную почту. Если у вас есть сомнения, напишите нам.',
 	},
 	{
 		id: '5',
-		question: 'Will my chosen charity receive all my donation?',
+		question: 'Есть ли возрастные ограничения для участия?',
 		answer:
-			'Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique. Sit congue non vitae odio sit erat in. Felis eu ultrices a sed massa. Commodo fringilla sed tempor risus laoreet ultricies ipsum. Habitasse morbi faucibus in iaculis lectus',
+			'Зависит от типа мероприятия. Например, для донорских акций требуется совершеннолетие, а в экологических субботниках могут участвовать и дети с сопровождением взрослых. Подробности указаны в описании.',
 	},
 ];

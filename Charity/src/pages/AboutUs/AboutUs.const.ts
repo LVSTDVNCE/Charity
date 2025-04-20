@@ -1,5 +1,5 @@
-const HERO_HEADING = 'United for Good, Strong for Charity';
+const HERO_HEADING = 'Кто мы и зачем это делаем';
 const HERO_PARAGRAPH =
-	'Libero dictum ut purus ut vel sit egestas. Ut ac mattis senectus ac suspendisse vitae vel nulla eleifend. Est eros facilisi aenean nisl a. Vitae et fusce purus consectetur.';
+	'Мы — команда энтузиастов, которая верит, что даже маленькие действия могут изменить мир к лучшему. Наша платформа объединяет людей, готовых помогать, и организации, которым нужна поддержка.';
 
 export { HERO_HEADING, HERO_PARAGRAPH };

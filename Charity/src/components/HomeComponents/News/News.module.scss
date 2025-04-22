@@ -30,6 +30,13 @@
 		font-family: $ff-secondary;
 		font-size: $fz-m;
 		font-weight: $fw-bold;
+		transition: all 250ms ease;
+		color: $text-color-main;
+
+		&:hover {
+			background-color: $bg-color-secondary-button;
+			color: $text-color-secondary;
+		}
 	}
 
 	&__cardsList {
@@ -44,17 +51,23 @@
 		font-family: $ff-secondary;
 		font-weight: $fw-bold;
 		font-size: $fz-m;
+		color: $text-color-main;
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
 		gap: 8px;
 		margin-top: 70px;
+		transition: all ease 200ms;
 
 		&::after {
 			display: block;
 			width: 24px;
 			height: 24px;
 			content: url('../../../assets/icons/arrow-right.png');
+		}
+
+		&:hover {
+			gap: 16px;
 		}
 	}
 }

@@ -18,6 +18,7 @@ type TTextareaProps<T extends FieldValues> = {
 	children: ReactNode;
 	register: UseFormRegister<T>;
 	errors: FieldErrors<T>;
+	rules?: object;
 };
 
 export const Textarea = <T extends FieldValues>({
@@ -30,24 +31,25 @@ export const Textarea = <T extends FieldValues>({
 	children,
 	register,
 	errors,
+	rules,
 }: TTextareaProps<T>) => {
+	const hasError = !!get(errors, id);
 	const errorMessage = get(errors, `${id}.message`) as string;
 
 	return (
 		<div className={styles.textarea}>
 			{children}
 			<textarea
-				{...register(id)}
+				{...register(id, rules)}
 				name={name}
 				id={id}
-				required
 				rows={rows}
 				cols={cols}
 				maxLength={maxLength}
 				placeholder={placeholder}
 				className={styles.textarea__field}
 			/>
-			{errors && <p>{errorMessage}</p>}
+			{hasError && <p className={styles.textarea__error}>{errorMessage}</p>}
 		</div>
 	);
 };

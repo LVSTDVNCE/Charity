@@ -6,6 +6,7 @@ type TInputConfigProps = {
 	placeholder: string;
 	htmlFor: string;
 	text: string;
+	rules: object;
 };
 
 export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
@@ -15,6 +16,10 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Имя',
 		htmlFor: 'name',
 		text: 'Имя',
+		rules: {
+			required: 'Введите имя',
+			pattern: { value: /^[A-Za-zА-Яа-яёЁ\s]{2,30}$/ },
+		},
 	},
 	{
 		type: 'text',
@@ -22,6 +27,10 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Фамилия',
 		htmlFor: 'lastName',
 		text: 'Фамилия',
+		rules: {
+			required: 'Введите фамилию',
+			pattern: { value: /^[A-Za-zА-Яа-яёЁ\s]{2,30}$/ },
+		},
 	},
 	{
 		type: 'email',
@@ -29,6 +38,13 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Электронная почта',
 		htmlFor: 'email',
 		text: 'Электронная почта',
+		rules: {
+			required: 'Некорректный email',
+			pattern: {
+				value: /^[\w.-]{2,50}@[a-zA-Z0-9.-]{2,20}\.[a-zA-Z]{2,6}$/,
+				message: 'Некорректный email',
+			},
+		},
 	},
 	{
 		type: 'tel',
@@ -36,6 +52,13 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Номер телефона',
 		htmlFor: 'phoneNumber',
 		text: 'Номер телефона',
+		rules: {
+			required: 'Введите номер телефона',
+			pattern: {
+				value: /^[0-9]/,
+				message: 'Номер должен содержать 11 символов',
+			},
+		},
 	},
 
 	{
@@ -44,6 +67,7 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Место проведения',
 		htmlFor: 'address',
 		text: 'Место проведения',
+		rules: { required: 'Поле обязательно' },
 	},
 	{
 		type: 'date',
@@ -51,6 +75,7 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Дата проведения',
 		htmlFor: 'date',
 		text: 'Дата проведения',
+		rules: { required: 'Поле обязательно' },
 	},
 	{
 		type: 'time',
@@ -58,6 +83,7 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Время проведения',
 		htmlFor: 'time',
 		text: 'Время проведения',
+		rules: { required: 'Поле обязательно' },
 	},
 	{
 		type: 'text',
@@ -65,6 +91,7 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Название мероприятия',
 		htmlFor: 'title',
 		text: 'Название мероприятия',
+		rules: { required: 'Поле обязательно' },
 	},
 	{
 		type: 'file',
@@ -72,5 +99,6 @@ export const CREATE_FORM_ITEMS: TInputConfigProps[] = [
 		placeholder: 'Выберите фотографию',
 		htmlFor: 'image',
 		text: 'Выберите фотографию',
+		rules: { required: 'Поле обязательно' },
 	},
 ];

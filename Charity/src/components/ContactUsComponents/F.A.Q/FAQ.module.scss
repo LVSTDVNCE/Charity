@@ -17,6 +17,10 @@
 		font-size: $fz-3xl;
 		line-height: 68px;
 		margin-bottom: 40px;
+
+		@media (max-width: 600px) {
+			font-size: $fz-2xl;
+		}
 	}
 
 	&__paragraph {

@@ -4,9 +4,10 @@ import styles from './NavBar.module.scss';
 
 type TNavBarProps = {
 	className?: string;
+	onClick?: () => void;
 };
 
-export const NavBar = ({ className }: TNavBarProps) => {
+export const NavBar = ({ className, onClick }: TNavBarProps) => {
 	return (
 		<ul className={`${className} ${styles.header__list}`}>
 			{NAV_BAR_LINKS.map(item => (
@@ -16,6 +17,7 @@ export const NavBar = ({ className }: TNavBarProps) => {
 						className={({ isActive }) =>
 							isActive ? styles.header__active : styles.header__links
 						}
+						onClick={onClick}
 					>
 						{item.text}
 					</NavLink>

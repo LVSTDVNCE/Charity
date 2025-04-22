@@ -19,4 +19,10 @@
 			opacity: 60%;
 		}
 	}
+
+	&__error {
+		color: red;
+		font-size: $fz-s;
+		margin-top: 5px;
+	}
 }

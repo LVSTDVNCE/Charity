@@ -5,8 +5,8 @@ export const VideoSection = () => {
 	return (
 		<section className={styles.video}>
 			<h2 className={styles.video__heading}>
-				Как ваша поддержка трансформируется
-				<br /> в реальные изменения.
+				Как ваша поддержка создает
+				<br /> реальные изменения.
 			</h2>
 			<img className={styles.video__content} src={MOCK_IMG} alt='MOCK_IMG' />
 		</section>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Loader, Logo } from '@ui';
 import { ADDRESS, LINKS } from './Footer.const';
 import styles from './Footer.module.scss';
-import { RoutePaths } from '@routes';
 
 type TFooterLinks = {
 	id: number;
@@ -63,7 +62,7 @@ export const Footer = () => {
 					<h6 className={styles.footer__heading}>Мероприятия</h6>
 					<div className={styles.footer__events}>
 						{data?.map(item => (
-							<Link key={item.id} to={RoutePaths.EVENT} target='_blank'>
+							<Link key={item.id} to={`/event/${item.id}`}>
 								<img
 									src={item.image}
 									alt={item.title}

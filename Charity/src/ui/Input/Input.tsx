@@ -15,6 +15,7 @@ type TInputProps<T extends FieldValues> = {
 	children: ReactNode;
 	register: UseFormRegister<T>;
 	errors: FieldErrors<T>;
+	rules?: object;
 };
 
 export const Input = <T extends FieldValues>({
@@ -24,7 +25,9 @@ export const Input = <T extends FieldValues>({
 	children,
 	register,
 	errors,
+	rules,
 }: TInputProps<T>) => {
+	const hasError = !!get(errors, id);
 	const errorMessage = get(errors, `${id}.message`) as string;
 	return (
 		<div className={styles.input}>
@@ -34,11 +37,10 @@ export const Input = <T extends FieldValues>({
 				id={id}
 				placeholder={placeholder}
 				className={styles.input__field}
-				{...register(id)}
-				required
+				{...register(id, rules)}
 				accept='img/*'
 			/>
-			{errors && <p>{errorMessage}</p>}
+			{hasError && <p className={styles.input__error}>{errorMessage}</p>}
 		</div>
 	);
 };

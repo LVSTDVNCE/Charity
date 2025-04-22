@@ -22,10 +22,9 @@ const createEvent = async (Event: ICreateFormProps) => {
 		.from('events-images')
 		.getPublicUrl(filePath);
 
-	Event.image = publicURLData.publicUrl;
+	Event.urlToImage = publicURLData.publicUrl;
 
 	const { data, error } = await supabase.from('Events').insert(Event);
-	console.log(Event);
 
 	if (error) throw new Error(error.message);
 	return data;
@@ -46,6 +45,7 @@ export const CreateForm = () => {
 
 	const onSubmit = async (data: ICreateFormProps) => {
 		mutate(data);
+		console.log(data);
 	};
 
 	if (isPending) return <Loader />;
@@ -61,6 +61,7 @@ export const CreateForm = () => {
 							placeholder={item.placeholder}
 							register={register}
 							errors={errors}
+							rules={item.rules}
 						>
 							<Label htmlFor={item.htmlFor} text={item.text} />
 						</Input>
@@ -75,6 +76,7 @@ export const CreateForm = () => {
 					placeholder='Описание'
 					register={register}
 					errors={errors}
+					rules={{ required: 'Поле обязательно' }}
 				>
 					<Label htmlFor='description' text='Описание' />
 				</Textarea>

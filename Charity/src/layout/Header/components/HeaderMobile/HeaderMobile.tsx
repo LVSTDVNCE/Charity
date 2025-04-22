@@ -8,7 +8,7 @@ export const HeaderMobile = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleOpen = () => {
-		setIsOpen(!isOpen);
+		setIsOpen(prev => !prev);
 	};
 
 	return (
@@ -26,7 +26,7 @@ export const HeaderMobile = () => {
 					>
 						<img src={BURGER_CLOSE} alt='BURGER_CLOSE' />
 					</Button>
-					<NavBar className={styles.header__listMobile} />
+					<NavBar className={styles.header__listMobile} onClick={handleOpen} />
 					<Button
 						className={styles.header__button}
 						text='Пожертвовать'

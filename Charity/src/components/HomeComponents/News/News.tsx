@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Card, Loader } from '@ui';
+import { Card, Loader, Message } from '@ui';
 import { TCard } from 'types';
 import styles from './News.module.scss';
 
@@ -41,8 +41,8 @@ export const News = () => {
 			<div className={styles.news__cardsList}>
 				{isLoading ? (
 					<Loader />
-				) : (
-					data?.articles.map((item, index) => (
+				) : data && data.totalResults > 0 ? (
+					data.articles.map((item, index) => (
 						<Card card={item} key={index}>
 							<a
 								href={item.url}
@@ -53,6 +53,8 @@ export const News = () => {
 							</a>
 						</Card>
 					))
+				) : (
+					<Message text='Новости не загружены' type='error' />
 				)}
 			</div>
 		</section>

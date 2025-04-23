@@ -28,7 +28,8 @@
 			"types": ["src/types/index.ts"],
 			"@constants/*": ["src/constants/*"],
 			"@routes": ["src/routes/index.ts"],
-			"@store": ["src/store/index.ts"]
+			"@store": ["src/store/index.ts"],
+			"@hooks/*": ["src/hooks/*"]
 		},
 
 		/* Linting */

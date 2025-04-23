@@ -1,2 +1,52 @@
+@use '../../../styles/variables.scss' as *;
+
 .event {
+	display: flex;
+	flex-direction: column;
+	font-size: $fz-m;
+	padding-bottom: 120px;
+
+	&__img {
+		align-self: center;
+		max-width: 856px;
+		width: 100%;
+		border-radius: 20px;
+		margin-bottom: 28px;
+		box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.5);
+	}
+
+	&__wrapper {
+		padding: 20px;
+		box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+		border-radius: 20px;
+	}
+
+	&__wrapper,
+	&__heading,
+	&__description {
+		align-self: center;
+		max-width: 856px;
+		width: 100%;
+	}
+
+	&__orgWrapper,
+	&__details {
+		margin-bottom: 28px;
+	}
+
+	&__item {
+		margin-bottom: 5px;
+	}
+
+	&__TextBold {
+		font-family: $ff-secondary;
+		font-weight: $fw-bold;
+	}
+
+	&__heading {
+		font-family: $ff-secondary;
+		font-size: $fz-l;
+		font-weight: $fw-bold;
+		margin-bottom: 5px;
+	}
 }
